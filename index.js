@@ -103,7 +103,8 @@ server.auth.default('simple');
       config: {
           cors: {
               origin: ['http://localhost:3001'],
-              additionalHeaders: ['cache-control', 'x-requested-width']
+              additionalHeaders: ['cache-control', 'x-requested-width'],
+              credentials: true
           }
       },
       handler: async function (request, reply) {

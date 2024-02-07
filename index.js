@@ -20,7 +20,12 @@ const init = async () => {
     port: api_port,
     host: '0.0.0.0',
     routes: {
-      cors: true
+      //cors: true
+      "cors": {
+        "origin": ["Access-Control-Allow-Origin", "192.168.179.111:3000"],
+        "headers": ["Accept", "Content-Type"],
+        "additionalHeaders": ["X-Requested-With"]
+    }
     }
   });
 
